@@ -8,6 +8,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@svgdotjs/svg.js": "^3.1.1",
     "naive-ui": "^2.21.2",
     "pinia": "^2.0.4",
     "vue": "^3.2.16",

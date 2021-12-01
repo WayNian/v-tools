@@ -4,10 +4,16 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/",
     component: Layout,
-  },
-  {
-    path: "/about",
-    component: () => import("@/views/about/index.vue"),
+    children: [
+      {
+        path: "/draw",
+        component: () => import("@/views/draw/SvgDraw.vue"),
+      },
+      {
+        path: "/about",
+        component: () => import("@/views/about/index.vue"),
+      },
+    ],
   },
 ];
 export default routes;
