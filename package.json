@@ -8,12 +8,12 @@
     "serve": "vite preview",
     "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
     "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
-    "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint:lint-staged": "lint-staged",
     "prepare": "husky install"
   },
   "dependencies": {
     "@svgdotjs/svg.js": "^3.1.1",
+    "echarts": "^5.2.2",
     "naive-ui": "^2.21.2",
     "pinia": "^2.0.4",
     "vue": "^3.2.16",
@@ -38,7 +38,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix \"{src,mock}/**/*.{vue,ts,tsx}\"",
+      "eslint --fix",
       "prettier --write"
     ],
     "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
@@ -48,12 +48,7 @@
       "prettier --write"
     ],
     "*.vue": [
-      "eslint --fix \"{src,mock}/**/*.{vue,ts,tsx}\"",
-      "prettier --write",
-      "stylelint --fix"
-    ],
-    "*.{scss,less,styl,html}": [
-      "stylelint --fix",
+      "eslint --fix",
       "prettier --write"
     ],
     "*.md": [
